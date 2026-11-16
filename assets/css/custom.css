@@ -1,0 +1,421 @@
+/* 2. TYPOGRAPHY — different fonts from the original template */
+:root {
+  --default-font: "Open Sans", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+  --nav-font: "Exo 2", sans-serif;
+  --custom-blue: #55c7f5;
+  --custom-blue-light: #b8e7fb;
+  --custom-border: rgba(85, 199, 245, 0.28);
+}
+
+body {
+  font-family: var(--default-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--custom-blue-light);
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.15rem; }
+h6 { font-size: 1rem; }
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: 0.2px;
+}
+
+/* The template uses more specific selectors; customize those too. */
+.hero .hero-content h1 {
+  font-size: clamp(2.25rem, 4vw, 3.65rem);
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #f4fbff;
+}
+
+.hero .hero-content h2 {
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: #d2ebf7;
+}
+
+.hero .hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  color: #c5e3f0;
+}
+
+.section-title h2,
+.page-title .heading h1 {
+  font-family: var(--heading-font);
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  color: #e4f5ff;
+}
+
+/* 3. LINKS AND BUTTONS, including :hover and :active */
+a {
+  color: var(--custom-blue);
+  text-decoration: none;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+a:hover {
+  color: #d4f2ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid #97e2ff;
+  outline-offset: 3px;
+}
+
+.hero .hero-actions .btn {
+  padding: 14px 35px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.hero .hero-actions .btn.btn-primary {
+  background: #147fb5;
+  border-color: #55c7f5;
+  color: #ffffff;
+}
+
+.hero .hero-actions .btn.btn-primary:hover {
+  background: #08618f;
+  border-color: #9adfff;
+  color: #ffffff;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.hero .hero-actions .btn.btn-primary:active {
+  transform: scale(0.95);
+  background: #05496f;
+}
+
+.hero .hero-actions .btn.btn-outline {
+  background: rgba(85, 199, 245, 0.08);
+  color: #a9e3ff;
+  border-color: #55c7f5;
+}
+
+.hero .hero-actions .btn.btn-outline:hover {
+  background: rgba(85, 199, 245, 0.2);
+  color: #ffffff;
+  border-color: #a9e3ff;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.hero .hero-actions .btn.btn-outline:active {
+  transform: scale(0.95);
+  background: rgba(85, 199, 245, 0.3);
+}
+
+/* Buttons on the other CV pages */
+.about .btn-ghost,
+.portfolio .btn-primary,
+.contact .contact-form .btn {
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about .btn-ghost:hover,
+.portfolio .btn-primary:hover,
+.contact .contact-form .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 24px rgba(85, 199, 245, 0.22);
+  text-decoration: none;
+}
+
+.about .btn-ghost:active,
+.portfolio .btn-primary:active,
+.contact .contact-form .btn:active {
+  transform: scale(0.95);
+}
+
+/* 4. SECTION SPACING — About / Experience / Projects */
+.about {
+  padding: 80px 0;
+}
+.resume {
+  padding: 75px 0;
+}
+.portfolio {
+  padding: 85px 0;
+}
+
+.about .intro-content {
+  margin-bottom: 28px;
+  padding: 22px 24px;
+  border-left: 3px solid var(--custom-blue);
+  border-radius: 12px;
+  background: rgba(85, 199, 245, 0.045);
+}
+
+.about .skill-item {
+  margin-bottom: 16px;
+  padding: 28px;
+  border: 1px solid var(--custom-border);
+  border-radius: 16px;
+  box-shadow: 0 7px 22px rgba(0, 0, 0, 0.22);
+}
+
+.about .skill-item:hover {
+  box-shadow: 0 12px 28px rgba(41, 159, 217, 0.2);
+}
+
+.resume .resume-item {
+  margin-bottom: 3.5rem;
+  padding: 24px 28px;
+  border: 1px solid var(--custom-border);
+  border-radius: 16px;
+  background: var(--surface-color);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.resume .resume-item .resume-content {
+  padding-left: 1.75rem;
+}
+
+.portfolio .portfolio-card {
+  margin-bottom: 38px;
+  border: 1px solid var(--custom-border);
+  border-radius: 18px;
+  box-shadow: 0 9px 26px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio .portfolio-card .portfolio-info {
+  padding: 26px;
+}
+
+.portfolio .portfolio-card:hover {
+  box-shadow: 0 16px 35px rgba(31, 154, 211, 0.24);
+}
+
+/* More specific heading overrides from the original stylesheet */
+.about .intro-content .headline,
+.resume .resume-item .resume-title,
+.portfolio .portfolio-card .portfolio-info h4 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: #d4f1ff;
+}
+
+/* 5. TWO ADDITIONAL COMPONENTS — 3+ modified CSS properties each */
+/* Component 1: navigation menu */
+.header {
+  border-bottom: 2px solid rgba(85, 199, 245, 0.25);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.17);
+  padding: 18px 0;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  font-family: var(--nav-font);
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  color: #70d1ff;
+  text-decoration: none;
+}
+
+/* Component 2: scroll-to-top button */
+.scroll-top {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 2px solid #87dcff;
+  background: #14628d;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.35);
+}
+
+.scroll-top:hover {
+  background: #228fc8;
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+
+/* Accessibility — preserve text contrast and mobile layout */
+@media (max-width: 767px) {
+  .about, .resume, .portfolio { padding: 60px 0; }
+  .about .intro-content { padding: 18px; }
+  .resume .resume-item { padding: 18px; }
+  .hero .hero-content p { font-size: 1.05rem; line-height: 1.75; }
+  .hero .hero-actions .btn { padding: 12px 22px; }
+}
+
+/* ============================================================
+   LD9 OPTIONAL TASK (4 points)
+   Styles for lists/table created during LD8.
+   ============================================================ */
+
+/* Ordered and unordered lists: custom pseudo-element markers */
+main ol:not(.breadcrumb),
+main ul.custom-list,
+main .about ul,
+main .resume ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+main ol:not(.breadcrumb) {
+  counter-reset: cv-list;
+}
+
+main ol:not(.breadcrumb) > li {
+  counter-increment: cv-list;
+  position: relative;
+  padding: 7px 0 7px 38px;
+}
+
+main ol:not(.breadcrumb) > li::before {
+  content: counter(cv-list) ".";
+  position: absolute;
+  left: 0;
+  color: #7ad6ff;
+  font-weight: 800;
+}
+
+main ul.custom-list > li,
+main .about ul > li,
+main .resume ul > li {
+  position: relative;
+  padding: 7px 0 7px 28px;
+}
+
+main ul.custom-list > li::before,
+main .about ul > li::before,
+main .resume ul > li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #65cfff;
+  font-size: 0.7rem;
+  top: 12px;
+}
+
+/* Nested lists get a distinct style */
+main ol ol,
+main ol ul,
+main ul.custom-list ul,
+main ul.custom-list ol,
+main .about ul ul,
+main .resume ul ul {
+  margin: 10px 0 8px 10px;
+  padding: 8px 0 8px 14px;
+  border-left: 2px dashed #55c7f5;
+  background: rgba(85, 199, 245, 0.045);
+  border-radius: 6px;
+}
+
+main ol ol { counter-reset: cv-list; }
+
+main ul.custom-list ul > li::before,
+main .about ul ul > li::before,
+main .resume ul ul > li::before {
+  content: "○";
+  top: 7px;
+  font-size: 1rem;
+}
+
+/* Avoid counter/marker styling interfering with the navigation. */
+
+/* Table: header, zebra rows, hover, same cell padding and centered text */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--custom-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+main table thead th {
+  background: #17628b;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+main table th,
+main table td {
+  padding: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid rgba(130, 204, 241, 0.16);
+}
+
+main table tbody tr:nth-child(even) {
+  background-color: rgba(85, 199, 245, 0.11);
+}
+
+main table tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+main table tbody tr:hover {
+  background-color: rgba(85, 199, 245, 0.22);
+}
+
+.services ul:not(.navmenu ul) {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services ul > li {
+  position: relative;
+  padding: 7px 0 7px 28px;
+}
+
+.services ul > li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #65cfff;
+}
+
+.services ul ul {
+  margin: 10px 0 8px 10px;
+  padding: 8px 0 8px 20px;
+  border-left: 2px dashed #55c7f5;
+  background: rgba(85, 199, 245, 0.045);
+}
+
+.services ul ul > li::before {
+  content: "@";
+}
+
+.services table tr:first-child th {
+  background: #17628b;
+  color: white;
+  font-weight: 700;
+}
+
+.services table tr:nth-child(even) {
+  background: rgba(85, 199, 245, 0.11);
+}
+
+.services table tr:hover {
+  background: rgba(85, 199, 245, 0.22);
+}
