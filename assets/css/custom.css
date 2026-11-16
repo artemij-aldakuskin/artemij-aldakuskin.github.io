@@ -384,3 +384,174 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .hero .hero-actions .btn, .portfolio .portfolio-card, .scroll-top { transition: none; }
 }
+@keyframes socialWiggle {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: rotate(15deg);
+    opacity: 1;
+  }
+
+  60% {
+    transform: rotate(-15deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.hero .social-links a:hover {
+  animation: socialWiggle 1s 1;
+}
+
+.custom-spinner {
+  width: 40px;
+  height: 40px;
+  border-width: 4px;
+  border-color: #28c6f7;
+  border-style: solid;
+  border-top-color: transparent;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spinnerRotate 1s infinite;
+}
+
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.section-title h2 {
+  position: relative;
+}
+
+.section-title h2::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-top: 0px;
+  margin-left: 153px;
+  background: linear-gradient(90deg, #28c6f7, #a78bfa);
+  border-radius: 3px;
+  animation: linePulse 1s infinite;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #28c6f7, #a78bfa);
+  border-radius: 3px;
+  animation: linePulse 1s infinite;
+}
+
+@keyframes linePulse {
+  0% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(1.5);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.services {
+background: linear-gradient(
+  120deg,
+  #080e20,
+  #244578,
+  #39245e,
+  #080e20
+);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.section-title h2::before,
+.section-title h2::after {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.shape-circle {
+  width: 90px;
+  height: 90px;
+  border: 3px solid #28c6f7;
+  border-radius: 50%;
+  top: 18%;
+  right: 8%;
+  animation: circleFloat 5s ease-in-out infinite;
+}
+
+.shape-diamond {
+  width: 65px;
+  height: 65px;
+  border: 3px solid #a78bfa;
+  top: 10%;
+  left: 8%;
+  animation: diamondFloat 7s ease-in-out infinite;
+}
+
+@keyframes circleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes diamondFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(135deg);
+  }
+}
