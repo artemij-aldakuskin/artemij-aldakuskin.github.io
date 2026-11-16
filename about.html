@@ -55,6 +55,7 @@
           <li><a href="resume.html">Patirtis</a></li>
           <li><a href="services.html">Paslaugos</a></li>
           <li><a href="portfolio.html">Projektai</a></li>
+          <li><a href="about.html#competencies">Kompetencijos</a></li>
           <li><a href="contact.html">Kontaktai</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -178,8 +179,42 @@ Taip pat turiu darbo klientų aptarnavimo srityje patirties, dalyvauju universit
         </div>
 
       </div>
-
     </section><!-- /Skills Section -->
+    <section id="competencies" class="section competencies">
+      <div class="container section-title">
+        <h2>Kompetencijų pažanga</h2>
+      </div>
+      <div class="container">
+        <div class="competency-summary">
+          <img id="levelAvatar" width="88" height="88" alt="">
+          <div class="competency-progress">
+            <div id="levelInfo" aria-live="polite"></div>
+            <progress id="levelProgress" value="0" max="100" aria-label="Pažanga iki kito lygio"></progress>
+            <div id="skillStats"></div>
+          </div>
+        </div>
+        <div class="row g-3" id="competencyBoard">
+          <div class="col-md-4">
+            <h3>Planuojama</h3>
+            <div data-status="planned"></div>
+          </div>
+          <div class="col-md-4">
+            <h3>Mokomasi</h3>
+            <div data-status="learning"></div>
+          </div>
+          <div class="col-md-4">
+            <h3>Atlikta</h3>
+            <div data-status="done"></div>
+          </div>
+        </div>
+        <h3 class="mt-4">Pasiekimai</h3>
+        <ul id="achievements" class="list-unstyled row g-3 mb-0" aria-live="polite">
+          <li class="col-md-4"><div class="achievement">Įgūdžių atradėjas <span></span></div></li>
+          <li class="col-md-4"><div class="achievement">Įgūdžių meistras <span></span></div></li>
+          <li class="col-md-4"><div class="achievement">Įgūdžių ekspertas <span></span></div></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer id="footer" class="footer">
@@ -225,7 +260,7 @@ Taip pat turiu darbo klientų aptarnavimo srityje patirties, dalyvauju universit
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

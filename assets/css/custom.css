@@ -555,3 +555,91 @@ background: linear-gradient(
     transform: translateY(20px) rotate(135deg);
   }
 }
+.contact .info-box h3,
+.contact .info-box h4 {
+  color: #eef6ff;
+}
+
+.contact .contact-form label {
+  display: block;
+  margin-bottom: .35rem;
+}
+
+.form-error {
+  color: #ffb4b4;
+}
+
+#contactResults:not(:empty) {
+  margin-top: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+.contact .contact-form #contactResults p {
+  color: var(--default-color);
+  margin-bottom: .35rem;
+}
+
+.competency-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.competency-progress {
+  flex: 1;
+}
+
+#levelProgress {
+  width: 100%;
+  accent-color: var(--accent-color);
+}
+
+.competency-card,
+.achievement {
+  padding: .8rem;
+  border: 1px solid var(--custom-border);
+  border-radius: .65rem;
+  background: var(--surface-color);
+}
+
+.competency-card {
+  margin-bottom: .75rem;
+}
+
+.competency-card select {
+  margin-top: .5rem;
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+.achievement span {
+  display: block;
+}
+
+.achievement.is-unlocked {
+  border-color: var(--accent-color);
+  background: #203a50;
+}
+.hero .hero-content h1::before,
+.hero .hero-content h1::after,
+.services .section-title h1::before,
+.services .section-title h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #28c6f7, #a78bfa);
+  border-radius: 3px;
+  animation: linePulse 1s infinite;
+}
+
+.hero .hero-content h1::before,
+.services .section-title h1::before {
+  margin: 0 auto 14px;
+}
+
+.hero .hero-content h1::after,
+.services .section-title h1::after {
+  margin: 14px auto 0;
+}

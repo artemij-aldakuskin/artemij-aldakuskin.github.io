@@ -54,6 +54,7 @@
           <li><a href="resume.html">Patirtis</a></li>
           <li><a href="services.html">Paslaugos</a></li>
           <li><a href="portfolio.html">Projektai</a></li>
+          <li><a href="about.html#competencies">Kompetencijos</a></li>
           <li><a href="contact.html" class="active">Kontaktai</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -76,7 +77,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2>Kontaktai</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -84,17 +85,17 @@
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-              <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Kontaktinė informacija</h3>
+              <p>Jeigu turite klausimų, pasiūlymų ar norite bendradarbiauti, susisiekite su manimi. Domiuosi dirbtiniu intelektu, programavimu ir elektroninėmis sistemomis. Esu atviras naujoms idėjoms, projektams ir galimybėms įgyti praktinės patirties</p>
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <h4>Vieta</h4>
+                  <p>Plytinės g. 25</p>
+                  <p>10105 Vilniaus m. sav.</p>
                 </div>
               </div>
 
@@ -103,9 +104,8 @@
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <h4>Telefono numeris</h4>
+                  <p>+8 800 5553535</p>
                 </div>
               </div>
 
@@ -114,9 +114,8 @@
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
-                  <h4>Email Address</h4>
+                  <h4>El. paštas</h4>
                   <p>info@example.com</p>
-                  <p>contact@example.com</p>
                 </div>
               </div>
             </div>
@@ -124,38 +123,56 @@
 
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
-
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-
+              <h3>Susisiekite su manimi</h3>
+              <form id="contactForm" novalidate>
+                <div class="row gy-3">
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <label for="firstName">Vardas</label>
+                    <input id="firstName" name="firstName" type="text" class="form-control" aria-describedby="firstNameError" required>
+                    <div class="form-error" id="firstNameError" aria-live="polite"></div>
                   </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <div class="col-md-6">
+                    <label for="lastName">Pavardė</label>
+                    <input id="lastName" name="lastName" type="text" class="form-control" aria-describedby="lastNameError" required>
+                    <div class="form-error" id="lastNameError" aria-live="polite"></div>
                   </div>
-
+                  <div class="col-md-6">
+                    <label for="email">El. paštas</label>
+                    <input id="email" name="email" type="email" class="form-control" aria-describedby="emailError" required>
+                    <div class="form-error" id="emailError" aria-live="polite"></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone">Telefono numeris</label>
+                    <input id="phone" name="phone" type="tel" class="form-control" aria-describedby="phoneError" inputmode="numeric" maxlength="16" required>
+                    <div class="form-error" id="phoneError" aria-live="polite"></div>
+                  </div>
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <label for="address">Adresas</label>
+                    <input id="address" name="address" type="text" class="form-control" aria-describedby="addressError" required>
+                    <div class="form-error" id="addressError" aria-live="polite"></div>
                   </div>
-
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <label for="design">Kaip vertinate svetainės dizainą? (1–10)</label>
+                    <input id="design" name="design" type="number" class="form-control" aria-describedby="designError" min="1" max="10" step="1" required>
+                    <div class="form-error" id="designError" aria-live="polite"></div>
                   </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
+                  <div class="col-12">
+                    <label for="content">Kaip vertinate svetainės turinį? (1–10)</label>
+                    <input id="content" name="content" type="number" class="form-control" aria-describedby="contentError" min="1" max="10" step="1" required>
+                    <div class="form-error" id="contentError" aria-live="polite"></div>
                   </div>
-
+                  <div class="col-12">
+                    <label for="navigation">Kaip vertinate svetainės navigaciją? (1–10)</label>
+                    <input id="navigation" name="navigation" type="number" class="form-control" aria-describedby="navigationError" min="1" max="10" step="1" required>
+                    <div class="form-error" id="navigationError" aria-live="polite"></div>
+                  </div>
+                  <div class="col-12 d-flex flex-wrap gap-2">
+                    <button type="submit" class="btn" disabled>Siųsti</button>
+                    <button type="reset" class="btn">Išvalyti</button>
+                  </div>
                 </div>
               </form>
+              <div id="contactResults" aria-live="polite"></div>
 
             </div>
           </div>
@@ -211,7 +228,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/custom.js"></script>
 </body>
 
 </html>
